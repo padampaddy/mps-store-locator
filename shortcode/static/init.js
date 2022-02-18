@@ -35,12 +35,9 @@ window.initMap = function () {
       "<div>" +
       store.phone +
       "</div>" +
-      '<p>Website: <a href="http://' +
+      (store.website.trim().length>0?'<p>Website: http://' +
       store.website +
-      '"' +
-      " target='_blank'>" +
-      store.title +
-      "</a></p>" +
+      "</p>":"") +
       "</div>" +
       "</div>";
     let infowindow = new google.maps.InfoWindow({
